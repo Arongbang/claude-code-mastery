@@ -1,0 +1,386 @@
+- generic [active] [ref=e1]:
+  - navigation "주 내비게이션" [ref=e2]:
+    - generic [ref=e4]:
+      - link "<김개발 />" [ref=e5] [cursor=pointer]:
+        - /url: "#hero"
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "About" [ref=e8] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e9]:
+          - link "Skills" [ref=e10] [cursor=pointer]:
+            - /url: "#skills"
+        - listitem [ref=e11]:
+          - link "Experience" [ref=e12] [cursor=pointer]:
+            - /url: "#experience"
+        - listitem [ref=e13]:
+          - link "Projects" [ref=e14] [cursor=pointer]:
+            - /url: "#projects"
+        - listitem [ref=e15]:
+          - link "SNS" [ref=e16] [cursor=pointer]:
+            - /url: "#sns"
+        - listitem [ref=e17]:
+          - link "Contact" [ref=e18] [cursor=pointer]:
+            - /url: "#contact"
+      - button "다크모드 전환" [ref=e20] [cursor=pointer]:
+        - img [ref=e21]
+    - navigation "모바일 내비게이션" [ref=e23]:
+      - list [ref=e24]:
+        - listitem [ref=e25]:
+          - link "About" [ref=e26] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e27]:
+          - link "Skills" [ref=e28] [cursor=pointer]:
+            - /url: "#skills"
+        - listitem [ref=e29]:
+          - link "Experience" [ref=e30] [cursor=pointer]:
+            - /url: "#experience"
+        - listitem [ref=e31]:
+          - link "Projects" [ref=e32] [cursor=pointer]:
+            - /url: "#projects"
+        - listitem [ref=e33]:
+          - link "SNS" [ref=e34] [cursor=pointer]:
+            - /url: "#sns"
+        - listitem [ref=e35]:
+          - link "Contact" [ref=e36] [cursor=pointer]:
+            - /url: "#contact"
+  - main [ref=e37]:
+    - region "소개" [ref=e38]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: 구직 중 · Open to Work
+          - heading "안녕하세요, 김개발 입니다" [level=1] [ref=e44]:
+            - text: 안녕하세요,
+            - text: 김개발 입니다
+          - paragraph [ref=e45]:
+            - text: 저는
+            - generic [ref=e46]: Fr
+            - generic [ref=e47]: "|"
+          - paragraph [ref=e48]: 사용자 경험을 최우선으로 생각하며 깔끔하고 유지보수 가능한 코드를 작성합니다.
+          - generic [ref=e49]:
+            - link "연락하기" [ref=e50] [cursor=pointer]:
+              - /url: "#contact"
+              - text: 연락하기
+              - img [ref=e51]
+            - link "이력서 다운로드" [ref=e53] [cursor=pointer]:
+              - /url: assets/resume.pdf
+              - text: 이력서 다운로드
+              - img [ref=e54]
+          - generic "소셜 링크" [ref=e56]:
+            - link "GitHub 프로필" [ref=e57] [cursor=pointer]:
+              - /url: https://github.com/devkim
+              - img [ref=e58]
+            - link "YouTube 채널" [ref=e60] [cursor=pointer]:
+              - /url: https://youtube.com/@devkim
+              - img [ref=e61]
+            - link "Instagram 프로필" [ref=e63] [cursor=pointer]:
+              - /url: https://instagram.com/devkim
+              - img [ref=e64]
+            - link "LinkedIn 프로필" [ref=e66] [cursor=pointer]:
+              - /url: https://linkedin.com/in/devkim
+              - img [ref=e67]
+            - link "이메일 보내기" [ref=e69] [cursor=pointer]:
+              - /url: mailto:dev.kim@example.com
+              - img [ref=e70]
+        - generic [ref=e73]:
+          - img "프로필 사진" [ref=e76]
+          - generic [ref=e78]: React
+          - generic [ref=e79]: TypeScript
+      - link "아래로 스크롤" [ref=e80] [cursor=pointer]:
+        - /url: "#about"
+        - img [ref=e81]
+    - region "About Me" [ref=e83]:
+      - generic [ref=e84]:
+        - heading "About Me" [level=2] [ref=e86]
+        - generic [ref=e88]:
+          - img "프로필 사진" [ref=e91]
+          - generic [ref=e93]:
+            - paragraph [ref=e94]:
+              - text: 안녕하세요! 3년차 프론트엔드 개발자
+              - strong [ref=e95]: 김개발
+              - text: 입니다. 사용자 경험을 최우선으로 생각하며, 깔끔하고 유지보수 가능한 코드를 작성하는 것을 목표로 합니다.
+            - paragraph [ref=e96]: 새로운 기술을 빠르게 습득하고 팀과의 협업을 즐기는 개발자입니다. React 생태계를 중심으로 성능 최적화와 웹 접근성에 깊은 관심을 갖고 있습니다.
+            - paragraph [ref=e97]: 오픈소스 기여와 기술 블로그 운영을 통해 개발 커뮤니티에 기여하고 있습니다.
+            - generic [ref=e98]:
+              - generic [ref=e99]:
+                - generic [ref=e100]: 3+
+                - generic [ref=e101]: 년 경력
+              - generic [ref=e102]:
+                - generic [ref=e103]: 15+
+                - generic [ref=e104]: 프로젝트
+              - generic [ref=e105]:
+                - generic [ref=e106]: 2+
+                - generic [ref=e107]: 회사 경험
+    - region "Skills" [ref=e108]:
+      - generic [ref=e109]:
+        - heading "Skills" [level=2] [ref=e111]
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - generic [ref=e115]:
+              - img [ref=e117]
+              - heading "Frontend" [level=3] [ref=e119]
+            - generic [ref=e120]:
+              - generic [ref=e121]: HTML5
+              - generic [ref=e122]: CSS3
+              - generic [ref=e123]: JavaScript
+              - generic [ref=e124]: TypeScript
+              - generic [ref=e125]: React
+              - generic [ref=e126]: TailwindCSS
+            - generic [ref=e127]:
+              - generic [ref=e129]:
+                - generic [ref=e130]: JavaScript / TypeScript
+                - generic [ref=e131]: 85%
+              - generic [ref=e134]:
+                - generic [ref=e135]: React
+                - generic [ref=e136]: 80%
+              - generic [ref=e139]:
+                - generic [ref=e140]: CSS / TailwindCSS
+                - generic [ref=e141]: 90%
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - img [ref=e146]
+              - heading "Backend" [level=3] [ref=e148]
+            - generic [ref=e149]:
+              - generic [ref=e150]: Node.js
+              - generic [ref=e151]: Express
+              - generic [ref=e152]: Python
+              - generic [ref=e153]: MySQL
+              - generic [ref=e154]: MongoDB
+              - generic [ref=e155]: REST API
+            - generic [ref=e156]:
+              - generic [ref=e158]:
+                - generic [ref=e159]: Node.js / Express
+                - generic [ref=e160]: 70%
+              - generic [ref=e163]:
+                - generic [ref=e164]: Python
+                - generic [ref=e165]: 65%
+              - generic [ref=e168]:
+                - generic [ref=e169]: Database (SQL/NoSQL)
+                - generic [ref=e170]: 72%
+          - generic [ref=e172]:
+            - generic [ref=e173]:
+              - img [ref=e175]
+              - heading "Tools & DevOps" [level=3] [ref=e178]
+            - generic [ref=e179]:
+              - generic [ref=e180]: Git / GitHub
+              - generic [ref=e181]: Docker
+              - generic [ref=e182]: Figma
+              - generic [ref=e183]: VS Code
+              - generic [ref=e184]: Vercel
+              - generic [ref=e185]: Jest
+            - generic [ref=e186]:
+              - generic [ref=e188]:
+                - generic [ref=e189]: Git / GitHub
+                - generic [ref=e190]: 88%
+              - generic [ref=e193]:
+                - generic [ref=e194]: Docker
+                - generic [ref=e195]: 60%
+              - generic [ref=e198]:
+                - generic [ref=e199]: Figma
+                - generic [ref=e200]: 75%
+    - region "Experience" [ref=e202]:
+      - generic [ref=e203]:
+        - heading "Experience" [level=2] [ref=e205]
+        - generic [ref=e207]:
+          - article [ref=e208]:
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - generic [ref=e212]:
+                  - heading "(주) 테크스타트업" [level=3] [ref=e213]
+                  - paragraph [ref=e214]: Frontend Developer
+                - generic [ref=e215]: 2023.03 ~ 현재
+              - list [ref=e216]:
+                - listitem [ref=e217]:
+                  - generic [ref=e218]: ▸
+                  - text: React 기반 SPA 서비스 개발 및 유지보수
+                - listitem [ref=e219]:
+                  - generic [ref=e220]: ▸
+                  - text: TailwindCSS 도입으로 스타일링 생산성 40% 향상
+                - listitem [ref=e221]:
+                  - generic [ref=e222]: ▸
+                  - text: 웹 성능 최적화로 LCP 지표 2.5초 → 1.2초 개선
+                - listitem [ref=e223]:
+                  - generic [ref=e224]: ▸
+                  - text: Jest + Testing Library 도입으로 테스트 커버리지 60% 달성
+              - generic [ref=e225]:
+                - generic [ref=e226]: React
+                - generic [ref=e227]: TypeScript
+                - generic [ref=e228]: TailwindCSS
+                - generic [ref=e229]: Zustand
+                - generic [ref=e230]: Jest
+          - article [ref=e231]:
+            - generic [ref=e233]:
+              - generic [ref=e234]:
+                - generic [ref=e235]:
+                  - heading "(주) 웹에이전시" [level=3] [ref=e236]
+                  - paragraph [ref=e237]: Web Developer (인턴)
+                - generic [ref=e238]: 2022.07 ~ 2023.02
+              - list [ref=e239]:
+                - listitem [ref=e240]:
+                  - generic [ref=e241]: ▸
+                  - text: 기업 홈페이지 10여 개 퍼블리싱 작업
+                - listitem [ref=e242]:
+                  - generic [ref=e243]: ▸
+                  - text: 반응형 웹 디자인 구현 (모바일 퍼스트)
+                - listitem [ref=e244]:
+                  - generic [ref=e245]: ▸
+                  - text: WordPress 커스텀 테마 개발 5건
+              - generic [ref=e246]:
+                - generic [ref=e247]: HTML/CSS
+                - generic [ref=e248]: JavaScript
+                - generic [ref=e249]: WordPress
+                - generic [ref=e250]: PHP
+    - region "Projects" [ref=e251]:
+      - generic [ref=e252]:
+        - heading "Projects" [level=2] [ref=e254]
+        - group "프로젝트 카테고리 필터" [ref=e256]:
+          - button "전체" [ref=e257] [cursor=pointer]
+          - button "Frontend" [ref=e258] [cursor=pointer]
+          - button "Fullstack" [ref=e259] [cursor=pointer]
+          - button "API 연동" [ref=e260] [cursor=pointer]
+        - generic [ref=e261]:
+          - article [ref=e262]:
+            - generic [ref=e263]:
+              - img "개인 포트폴리오 웹사이트 미리보기" [ref=e264]
+              - generic [ref=e265]:
+                - link "라이브 데모" [ref=e266] [cursor=pointer]:
+                  - /url: "#"
+                  - text: Live Demo
+                - link "GitHub 코드" [ref=e267] [cursor=pointer]:
+                  - /url: https://github.com/devkim
+                  - text: GitHub
+            - generic [ref=e268]:
+              - heading "개인 포트폴리오 웹사이트" [level=3] [ref=e269]
+              - paragraph [ref=e270]: HTML, CSS, JavaScript, TailwindCSS로 제작한 반응형 개발자 포트폴리오 페이지
+              - generic [ref=e271]:
+                - generic [ref=e272]: HTML
+                - generic [ref=e273]: TailwindCSS
+                - generic [ref=e274]: JavaScript
+          - article [ref=e275]:
+            - generic [ref=e276]:
+              - img "할 일 관리 앱 미리보기" [ref=e277]
+              - generic [ref=e278]:
+                - link "라이브 데모" [ref=e279] [cursor=pointer]:
+                  - /url: "#"
+                  - text: Live Demo
+                - link "GitHub 코드" [ref=e280] [cursor=pointer]:
+                  - /url: https://github.com/devkim
+                  - text: GitHub
+            - generic [ref=e281]:
+              - heading "할 일 관리 앱 (Kanban Board)" [level=3] [ref=e282]
+              - paragraph [ref=e283]: 드래그 앤 드롭 기능이 있는 칸반 보드 스타일 Todo 앱
+              - generic [ref=e284]:
+                - generic [ref=e285]: React
+                - generic [ref=e286]: TypeScript
+                - generic [ref=e287]: Zustand
+          - article [ref=e288]:
+            - generic [ref=e289]:
+              - img "날씨 대시보드 미리보기" [ref=e290]
+              - generic [ref=e291]:
+                - link "라이브 데모" [ref=e292] [cursor=pointer]:
+                  - /url: "#"
+                  - text: Live Demo
+                - link "GitHub 코드" [ref=e293] [cursor=pointer]:
+                  - /url: https://github.com/devkim
+                  - text: GitHub
+            - generic [ref=e294]:
+              - heading "날씨 대시보드" [level=3] [ref=e295]
+              - paragraph [ref=e296]: OpenWeather API를 활용한 실시간 날씨 정보 및 5일 예보 시각화 앱
+              - generic [ref=e297]:
+                - generic [ref=e298]: JavaScript
+                - generic [ref=e299]: OpenWeather API
+                - generic [ref=e300]: Chart.js
+    - region "Education" [ref=e301]:
+      - generic [ref=e302]:
+        - heading "Education" [level=2] [ref=e304]
+        - generic [ref=e306]:
+          - article [ref=e307]:
+            - generic [ref=e310]:
+              - generic [ref=e311]:
+                - heading "○○대학교" [level=3] [ref=e312]
+                - paragraph [ref=e313]: 컴퓨터공학과 · 학사
+              - generic [ref=e314]: 2018.03 ~ 2022.02
+          - article [ref=e315]:
+            - generic [ref=e318]:
+              - generic [ref=e319]:
+                - heading "정보처리기사" [level=3] [ref=e320]
+                - paragraph [ref=e321]: 한국산업인력공단
+              - generic [ref=e322]: 2022.06 취득
+          - article [ref=e323]:
+            - generic [ref=e326]:
+              - generic [ref=e327]:
+                - heading "SQLD (SQL 개발자)" [level=3] [ref=e328]
+                - paragraph [ref=e329]: 한국데이터산업진흥원
+              - generic [ref=e330]: 2023.03 취득
+    - region "SNS & Links" [ref=e331]:
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - heading "SNS & Links" [level=2] [ref=e334]
+          - paragraph [ref=e336]: 다양한 채널에서 저를 만나보세요
+        - generic [ref=e337]:
+          - link "GitHub — 오픈소스 코드 저장소" [ref=e338] [cursor=pointer]:
+            - /url: https://github.com/devkim
+            - img [ref=e340]
+            - generic [ref=e342]:
+              - paragraph [ref=e343]: GitHub
+              - paragraph [ref=e344]: github.com/devkim
+            - img [ref=e345]
+          - link "YouTube — 개발 튜토리얼 채널" [ref=e347] [cursor=pointer]:
+            - /url: https://youtube.com/@devkim
+            - img [ref=e349]
+            - generic [ref=e351]:
+              - paragraph [ref=e352]: YouTube
+              - paragraph [ref=e353]: youtube.com/@devkim
+            - img [ref=e354]
+          - link "Instagram — 개발 일상 & 팁" [ref=e356] [cursor=pointer]:
+            - /url: https://instagram.com/devkim
+            - img [ref=e358]
+            - generic [ref=e360]:
+              - paragraph [ref=e361]: Instagram
+              - paragraph [ref=e362]: instagram.com/devkim
+            - img [ref=e363]
+          - link "LinkedIn — 프로페셔널 네트워크" [ref=e365] [cursor=pointer]:
+            - /url: https://linkedin.com/in/devkim
+            - img [ref=e367]
+            - generic [ref=e369]:
+              - paragraph [ref=e370]: LinkedIn
+              - paragraph [ref=e371]: linkedin.com/in/devkim
+            - img [ref=e372]
+          - link "Twitter/X — 개발 트윗" [ref=e374] [cursor=pointer]:
+            - /url: https://twitter.com/devkim
+            - img [ref=e376]
+            - generic [ref=e378]:
+              - paragraph [ref=e379]: Twitter / X
+              - paragraph [ref=e380]: twitter.com/devkim
+            - img [ref=e381]
+          - link "기술 블로그 — Velog" [ref=e383] [cursor=pointer]:
+            - /url: https://velog.io/@devkim
+            - img [ref=e385]
+            - generic [ref=e387]:
+              - paragraph [ref=e388]: 기술 블로그
+              - paragraph [ref=e389]: velog.io/@devkim
+            - img [ref=e390]
+    - region "Contact" [ref=e392]:
+      - generic [ref=e393]:
+        - generic [ref=e394]:
+          - heading "Contact" [level=2] [ref=e395]
+          - paragraph [ref=e397]: 언제든지 연락주세요. 빠르게 회신드리겠습니다.
+        - generic [ref=e398]:
+          - link "이메일 보내기" [ref=e399] [cursor=pointer]:
+            - /url: mailto:dev.kim@example.com
+            - img [ref=e401]
+            - generic [ref=e403]:
+              - paragraph [ref=e404]: 이메일
+              - paragraph [ref=e405]: dev.kim@example.com
+          - link "GitHub 프로필" [ref=e406] [cursor=pointer]:
+            - /url: https://github.com/devkim
+            - img [ref=e408]
+            - generic [ref=e410]:
+              - paragraph [ref=e411]: GitHub
+              - paragraph [ref=e412]: github.com/devkim
+  - contentinfo [ref=e413]:
+    - generic [ref=e415]:
+      - paragraph [ref=e416]: © 2024 김개발. All rights reserved.
+      - paragraph [ref=e417]: Made with ♥ using HTML + TailwindCSS
+  - button "맨 위로 이동":
+    - img

@@ -1,0 +1,492 @@
+/* =====================================================
+   custom.css — TailwindCSS 유틸리티로 표현 불가한 스타일
+   ===================================================== */
+
+/* 폰트 렌더링 최적화 */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── 타이핑 커서 깜빡임 ───────────────────────────── */
+.typing-cursor {
+  display: inline-block;
+  font-weight: 300;
+  animation: blink 0.75s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── 타임라인 세로 선 ────────────────────────────── */
+/* Experience / Education 섹션 공통 — left 기준 점 중앙 정렬 */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, #6366F1, #8B5CF6, #06B6D4);
+  border-radius: 9999px;
+}
+
+/* ── 스크롤 진입 애니메이션 ──────────────────────── */
+/* 초기 상태: 투명 + 아래에서 위로 올라오는 시작점 */
+.animate-target {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* JS가 .is-visible을 추가하면 자연스럽게 나타남 */
+.animate-target.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 그리드/리스트 자식 요소 순차 등장 지연 */
+.animate-target:nth-child(2) { transition-delay: 0.08s; }
+.animate-target:nth-child(3) { transition-delay: 0.16s; }
+.animate-target:nth-child(4) { transition-delay: 0.24s; }
+.animate-target:nth-child(5) { transition-delay: 0.32s; }
+.animate-target:nth-child(6) { transition-delay: 0.40s; }
+
+/* ── 섹션 공통 헤더: 그라디언트 텍스트 ──────────── */
+/* TailwindCSS의 bg-clip-text는 일부 브라우저에서 -webkit- 접두사 필수 */
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── 섹션 구분선 ─────────────────────────────────── */
+.section-divider {
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(to right, #6366F1, #06B6D4);
+  border-radius: 9999px;
+  margin: 12px auto 0;
+}
+
+/* ── 스킬 뱃지 ───────────────────────────────────── */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #6366F1;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  cursor: default;
+}
+.skill-badge:hover {
+  background-color: #6366F1;
+  color: #fff;
+  border-color: #6366F1;
+}
+
+/* Secondary (보라) 뱃지 변형 */
+.skill-badge--secondary {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #8B5CF6;
+  border-color: rgba(139, 92, 246, 0.2);
+}
+.skill-badge--secondary:hover {
+  background-color: #8B5CF6;
+  color: #fff;
+  border-color: #8B5CF6;
+}
+
+/* Accent (시안) 뱃지 변형 */
+.skill-badge--accent {
+  background-color: rgba(6, 182, 212, 0.1);
+  color: #06B6D4;
+  border-color: rgba(6, 182, 212, 0.2);
+}
+.skill-badge--accent:hover {
+  background-color: #06B6D4;
+  color: #fff;
+  border-color: #06B6D4;
+}
+
+/* 다크모드 뱃지 오버라이드 */
+.dark .skill-badge {
+  background-color: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+.dark .skill-badge--secondary {
+  background-color: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+.dark .skill-badge--accent {
+  background-color: rgba(6, 182, 212, 0.15);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+/* ── 기술 태그 (프로젝트/경력 카드 소형) ─────────── */
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: rgba(99, 102, 241, 0.08);
+  color: #6366F1;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.dark .tech-tag {
+  background-color: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+/* ── 프로젝트 필터 버튼 ──────────────────────────── */
+.filter-btn {
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1.5px solid #e2e8f0;
+  color: #64748b;
+  background-color: #fff;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  border-color: #6366F1;
+  color: #6366F1;
+}
+.filter-btn.active {
+  background-color: #6366F1;
+  border-color: #6366F1;
+  color: #fff;
+}
+
+.dark .filter-btn {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #94a3b8;
+}
+.dark .filter-btn:hover {
+  border-color: #6366F1;
+  color: #6366F1;
+}
+.dark .filter-btn.active {
+  background-color: #6366F1;
+  border-color: #6366F1;
+  color: #fff;
+}
+
+/* ── 모바일 메뉴 슬라이드 애니메이션 ─────────────── */
+/* display:none → display:block 전환 시 CSS transition이 작동하지 않으므로
+   max-height 트릭으로 슬라이드 다운 효과를 구현 */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  /* hidden 클래스 제거 후 is-open 클래스로 제어 */
+  display: block !important;
+}
+
+#mobile-menu.is-open {
+  max-height: 400px;
+}
+
+/* ── 커스텀 스크롤바 (Webkit 브라우저) ───────────── */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6366F1, #8B5CF6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #4f46e5, #7c3aed);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+/* ── 네비게이션 활성 링크 강조 ───────────────────── */
+.nav-link.active,
+.mobile-nav-link.active {
+  color: #818cf8 !important;
+  font-weight: 600;
+}
+
+/* ── SNS 카드 ─────────────────────────────────────── */
+/* hover 시 그라디언트 테두리는 TailwindCSS JIT로는 구현 불가 */
+.sns-card {
+  position: relative;
+}
+
+/* ── 반응형 보조: line-clamp 크로스 브라우저 ─────── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════
+   모던 다크 디자인 확장 스타일
+   ═══════════════════════════════════════════════════ */
+
+/* ── 네비게이션 premium dark glass ───────────────── */
+.navbar-glass {
+  background: rgba(10, 15, 30, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Hero 배경: 방사형 메시 그라디언트 ─────────── */
+.hero-mesh-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 40%, rgba(99, 102, 241, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 85% 70%, rgba(6, 182, 212, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 15%, rgba(139, 92, 246, 0.07) 0%, transparent 60%);
+}
+
+/* ── Hero 배경: Glow Orb 애니메이션 ─────────────── */
+.hero-orb-primary {
+  position: absolute;
+  top: -180px;
+  right: -100px;
+  width: 520px;
+  height: 520px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+  filter: blur(50px);
+  animation: orb-float 9s ease-in-out infinite;
+}
+
+.hero-orb-secondary {
+  position: absolute;
+  bottom: -140px;
+  left: -100px;
+  width: 440px;
+  height: 440px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.13) 0%, transparent 70%);
+  filter: blur(50px);
+  animation: orb-float 11s ease-in-out infinite reverse;
+}
+
+.hero-orb-accent {
+  position: absolute;
+  top: 45%;
+  left: 38%;
+  width: 320px;
+  height: 320px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.09) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: orb-float 13s ease-in-out infinite 2.5s;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(22px, -22px) scale(1.06); }
+  66%       { transform: translate(-16px, 14px) scale(0.96); }
+}
+
+/* ── Hero 배경: 서브틀 격자 오버레이 ──────────────── */
+.hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* ── Hero 이름 그라디언트 ────────────────────────── */
+.hero-name-gradient {
+  background: linear-gradient(135deg, #818cf8 0%, #6366F1 35%, #8B5CF6 65%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Hero 이미지 컨테이너 ────────────────────────── */
+.hero-image-container {
+  position: relative;
+  width: fit-content;
+}
+
+/* 이미지 주변 방사형 glow */
+.hero-image-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, transparent 68%);
+  filter: blur(24px);
+  z-index: 0;
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.7; }
+  50%       { opacity: 1; }
+}
+
+/* 회전하는 gradient 테두리 */
+.hero-gradient-border {
+  position: absolute;
+  inset: -2px;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, #6366F1, #8B5CF6, #06B6D4, #6366F1);
+  background-size: 300% 300%;
+  animation: gradient-rotate 5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes gradient-rotate {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 점 패턴 장식 */
+.hero-dots-pattern {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  width: 96px;
+  height: 96px;
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.5) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  z-index: 0;
+}
+
+/* 떠다니는 스킬 뱃지 */
+.hero-floating-badge {
+  position: absolute;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 20;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.hero-floating-badge--primary {
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #818cf8;
+  animation: badge-float 3.2s ease-in-out infinite;
+}
+
+.hero-floating-badge--accent {
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: #22d3ee;
+  animation: badge-float 3.8s ease-in-out infinite 1.6s;
+}
+
+@keyframes badge-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ── Glassmorphism 카드 ───────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(99, 102, 241, 0.28);
+  box-shadow:
+    0 0 28px rgba(99, 102, 241, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* 라이트모드 glass-card 오버라이드 */
+:root:not(.dark) .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(99, 102, 241, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+:root:not(.dark) .glass-card:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(99, 102, 241, 0.28);
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Primary 버튼 Glow ────────────────────────────── */
+.btn-glow-primary {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.35), 0 4px 16px rgba(99, 102, 241, 0.2);
+  transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+.btn-glow-primary:hover {
+  box-shadow: 0 0 32px rgba(99, 102, 241, 0.55), 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+/* ── 라이트모드 body 기본 배경 (다크 제거 시) ────── */
+:root:not(.dark) body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* ── 커스텀 스크롤바 (다크 기본값) ─────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6366F1, #8B5CF6);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #4f46e5, #7c3aed);
+}
+
+:root:not(.dark) ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+/* ── 접근성: 모션 감소 설정 ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-orb-primary,
+  .hero-orb-secondary,
+  .hero-orb-accent,
+  .hero-image-glow,
+  .hero-gradient-border,
+  .hero-floating-badge--primary,
+  .hero-floating-badge--accent { animation: none; }
+
+  .glass-card { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .navbar-glass { backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
